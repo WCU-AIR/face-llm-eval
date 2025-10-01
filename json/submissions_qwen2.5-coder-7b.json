@@ -1,0 +1,18 @@
+{
+  "10kindsofpeople": {
+    "cases_passed": [
+      22,
+      25
+    ],
+    "id": "10kindsofpeople",
+    "status": "Time Limit Exceeded"
+  },
+  "1dfroggereasy": {
+    "cases_passed": [
+      38,
+      38
+    ],
+    "id": "1dfroggereasy",
+    "status": "Accepted"
+  }
+}
