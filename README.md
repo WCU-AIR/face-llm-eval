@@ -12,12 +12,6 @@ A lightweight evaluation framework used to generate and submit Python solutions 
 3. A Kattis account and your `.kattisrc` file placed inside the `src/` directory. See https://open.kattis.com/info/submit for how to retrieve your personal `.kattisrc`.
 
 
-## Files of interest
-
-- `src/gen_solutions.py` — generate model solutions for problems in `json/kattis_problems.json`.
-- `src/sub_solutions.py` — iterate through generated solutions and submit them to Kattis; writes results to `json/submissions_<model>.json` and checkpoints progress in `json/checkpoint.txt`.
-- `src/submit.py` — helper script used by `sub_solutions.py` to call Kattis submission tooling (expects `.kattisrc` to be configured).
-
 ## Quickstart (generate + submit)
 
 1. Prepare environment and install `ollama` Python client (see Prerequisites).
