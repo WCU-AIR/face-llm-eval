@@ -1,1 +1,53 @@
 # face-llm-eval
+
+A lightweight evaluation framework used to generate and submit Python solutions to Kattis problems using locally-hosted LLM models (via Ollama). This repository was developed as part of a research project and is suitable for demos and reproducible experiments. 
+
+## Highlights
+
+- Generate LLM-written Python solutions for Kattis problems using `src/gen_solutions.py` (Ollama client).
+- Submit generated solutions to Kattis and save structured submission results with `src/sub_solutions.py`.
+- Outputs and intermediate data are stored in the `json/` folder for later analysis.
+
+## Prerequisites
+
+1. Python 3.x 
+
+2. Ollama installed and running locally if you plan to generate model outputs. Follow the official instructions at https://ollama.com/download. Pull a model you want to use (example name used in repository: `qwen2.5-coder:7b`).
+
+3. A Kattis account and your `.kattisrc` file placed inside the `src/` directory. See https://open.kattis.com/info/submit for how to retrieve your personal `.kattisrc`.
+
+
+## Files of interest
+
+- `src/gen_solutions.py` — generate model solutions for problems in `json/kattis_problems.json`.
+- `src/sub_solutions.py` — iterate through generated solutions and submit them to Kattis; writes results to `json/submissions_<model>.json` and checkpoints progress in `json/checkpoint.txt`.
+- `src/submit.py` — helper script used by `sub_solutions.py` to call Kattis submission tooling (expects `.kattisrc` to be configured).
+
+## Quickstart (generate + submit)
+
+1. Prepare environment and install `ollama` Python client (see Prerequisites).
+
+2. Start Ollama and make sure your model is downloaded locally, or adjust the `model` variable in `src/gen_solutions.py`.
+
+3. Generate solutions (this writes to a file in `json/`). Edit the `model` variable in `src/gen_solutions.py` then run:
+
+	```bash
+	python3 src/gen_solutions.py
+	```
+
+	Output: `json/kattis_solutions_<model>_test.json`.
+
+4. Submit solutions to Kattis (make sure `.kattisrc` is in `src/`). The submission script expects a model identifier; pass the same model name used while generating solutions:
+
+	```bash
+	python3 src/sub_solutions.py -m qwen2.5-coder-7b
+	```
+
+	Output: `json/submissions_qwen2.5-coder-7b.json` and `json/checkpoint.txt` that stores the last submitted problem id.
+
+Note: `sub_solutions.py` sleeps randomly between submissions (60–100s) to avoid rate limits. 
+
+## Paper showcase
+Add paper info here
+
+---
