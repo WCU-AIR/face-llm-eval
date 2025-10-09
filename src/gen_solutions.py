@@ -28,7 +28,7 @@ end_time = time.perf_counter()
 load_time = end_time - start_time
 print(f"Loading completed in {load_time} seconds")
         
-solutions_file = f"../json/kattis_solutions_{format_model_name(model)}_test.json"
+solutions_file = f"../json/kattis_solutions_{format_model_name(model)}.json"
 
 ### Setup counters
 counter = 0
