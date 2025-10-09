@@ -9,7 +9,7 @@ from utilities import get_last_non_empty_line, get_test_cases_info
 
 # Ensure execution always happens from face-llm-eval/src
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
-PROJECT_ROOT = os.path.abspath(os.path.join(SCRIPT_DIR, ".."))  # face-llm-eval
+PROJECT_ROOT = os.path.abspath(os.path.join(SCRIPT_DIR, "..")) 
 SRC_DIR = os.path.join(PROJECT_ROOT, "src")
 os.chdir(SRC_DIR)
 
