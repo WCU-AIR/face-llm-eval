@@ -11,6 +11,7 @@ PROJECT_ROOT = os.path.abspath(os.path.join(SCRIPT_DIR, ".."))
 SRC_DIR = os.path.join(PROJECT_ROOT, "src")
 os.chdir(SRC_DIR)
 
+# Adjust this as needed!
 model = "qwen2.5-coder:7b"
 
 
