@@ -2,11 +2,6 @@
 
 A lightweight evaluation framework used to generate and submit Python solutions to Kattis problems using locally-hosted LLM models (via Ollama). This repository was developed as part of a research project and is suitable for demos and reproducible experiments. 
 
-## Highlights
-
-- Generate LLM-written Python solutions for Kattis problems using `src/gen_solutions.py` (Ollama client).
-- Submit generated solutions to Kattis and save structured submission results with `src/sub_solutions.py`.
-- Outputs and intermediate data are stored in the `json/` folder for later analysis.
 
 ## Prerequisites
 
