@@ -40,7 +40,24 @@ Note: `sub_solutions.py` sleeps randomly between submissions (60–100s) to avoi
 If you wish to replicate or extend this experiment at a larger scale, as done in our paper, refer to the original FACE repository (https://github.com/linhbngo/llama-kattis).
 You’ll need to convert the problems found in the automining directory into a single JSON file containing all problems, formatted in the same style as `kattis_problems.json`.
 
+
 ## Paper showcase
-Add paper info here
+Here's the paper from this research at full scale (3,500 problems): https://www.arxiv.org/abs/2509.15283
+
+## Reference
+
+Please cite the repo if you use the data or code in this repo.
+
+```
+@misc{matotek2025evaluatinglimitationslocalllms,
+      title={Evaluating the Limitations of Local LLMs in Solving Complex Programming Challenges}, 
+      author={Kadin Matotek and Heather Cassel and Md Amiruzzaman and Linh B. Ngo},
+      year={2025},
+      eprint={2509.15283},
+      archivePrefix={arXiv},
+      primaryClass={cs.SE},
+      url={https://arxiv.org/abs/2509.15283}, 
+}
+```
 
 ---
