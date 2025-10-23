@@ -36,11 +36,6 @@ A lightweight evaluation framework used to generate and submit Python solutions 
 
 Note: `sub_solutions.py` sleeps randomly between submissions (60–100s) to avoid rate limits. 
 
-## Large Scale Evaluation
-If you wish to replicate or extend this experiment at a larger scale, as done in our paper, refer to the original FACE repository (https://github.com/linhbngo/llama-kattis).
-You’ll need to convert the problems found in the automining directory into a single JSON file containing all problems, formatted in the same style as `kattis_problems.json`.
-
-
 ## Paper showcase
 Here's the paper from this research at full scale (3,500 problems): https://www.arxiv.org/abs/2509.15283
 
